@@ -1,16 +1,19 @@
-const profile = {
-    name : 'Eduardo Solis',
-    cell_phone : '+52 1111111111',
-    email : 'an_email@email.com',
+class profile {
 
-    particulary_direction : 'Venustiano Carranza 606 1-6, Tamaulipas, 89060 Tampico, Tamps.',
-    job_direction : 'C. Cristóbal Colón LB, San Andres, 55780 Jaltenco, Méx.',
+    constructor(name, phone, email, particulary_direction, job_direction, payment_methods) {
+        this.name = name
+        this.phone = phone
+        this.email = email
+        this.particulary_direction = particulary_direction
+        this.job_direction = job_direction
+        this.payment_methods = payment_methods
+    }
 
-    payment_methods : ['Cash', 'Debit Card 1', 'Debit Card 2', 'Credit Card'],
-
-    getUser : function() {
+    getUser() {
         return `Name: ${this.name}, Payment method: ${this.payment_methods[0]}`
     }
+
 }
 
-console.log(profile.getUser())
+const myProfile = new profile('Eduardo Solis', '+52 1111111111', 'an_email@email.com', 'Venustiano Carranza 606 1-6, Tamaulipas, 89060 Tampico, Tamps.', 'C. Cristóbal Colón LB, San Andres, 55780 Jaltenco, Méx.', ['Cash', 'Debit Card 1', 'Debit Card 2', 'Credit Card'])
+console.log(myProfile.getUser())
