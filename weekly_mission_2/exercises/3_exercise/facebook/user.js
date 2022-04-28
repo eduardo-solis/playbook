@@ -1,16 +1,19 @@
-const user = {
-    name: 'Eduardo Ruben',
-    last_name : 'Solis Hernandez',
-    cell_phone: '+521111111111',
-    email : 'an_email@email.com',
-    password : 'a_password',
-    gender: 'Male',
+export default class user {
 
-    // Birth Day
-    day : 9,
-    month : 'January',
-    year : 2000,
+    constructor(name, last_name, username, cell_phone, email, password, gender, day, month, year) {
+        this.name = name
+        this.last_name = last_name
+        this.username = username
+        this.cell_phone = cell_phone
+        this.email = email
+        this.password = password
+        this.gender = gender
+        this.day = day
+        this.month = month
+        this.year = year
+    }
 
 }
 
-console.log(user)
+const myUser = new user('Eduardo Ruben', 'Solis Hernandez', 'Eduardo Solis Jr.', '+521111111111', 'an_email@email.com', 'a_password', 'Male', 9, 'January', 2000)
+console.log(myUser)
