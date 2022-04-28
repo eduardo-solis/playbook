@@ -1,11 +1,17 @@
-const hashtag = {
-    title : 'IWantLearn',
-    tweet : 'If you want to learn programming you should practice 😀',
+class hashtag {
+    
+    constructor(title, tweet){
+        this.title = title
+        this.tweet = tweet
+    }
 
-    getHashtag : function () {
+    getHashtag() {
         return `#${this.title}`
     }
+
 }
 
-console.log(hashtag.getHashtag())
-console.log(hashtag)
+const myhashtag = new hashtag('IWantLearn', 'If you want to learn programming you should practice 😀')
+
+console.log(myhashtag.getHashtag())
+console.log(myhashtag)

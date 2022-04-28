@@ -1,15 +1,18 @@
-const trending = {
-    
-    numberOfList : 2,
-    topic: 'Entertainment',
-    title : '#QuieroMiPackDeMoonKnight',
-    tweet : ``,
-    tweets : 1292,
+class trending {
 
-    getGeneralInfo : function() {
-        return `${this.numberOfList} - ${this.topic} - Trending\n${this.title}\n${this.tweets} Tweets`
+    constructor(numberOfList, topic, title, tweet, numberOfTweets) {
+        this.numberOfList = numberOfList
+        this.topic = topic
+        this.title = title
+        this.tweet = tweet
+        this.numberOfTweets = numberOfTweets
+    }
+
+    getGeneralInfo() {
+        return `${this.numberOfList} - ${this.topic} - Trending\n${this.title}\n${this.numberOfTweets} Tweets`
     }
 
 }
 
-console.log(trending.getGeneralInfo())
+const myTrending = new trending(2, 'Entertainment', '#QuieroMiPackDeMoonKnight', '', 1292)
+console.log(myTrending.getGeneralInfo())
