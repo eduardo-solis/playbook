@@ -14,4 +14,14 @@ describe('Unit Test for Spiderman class', () => {
         expect(andrewGarfield.numberOfMovies).toBe(2);
         expect(andrewGarfield.studio).toBe('Sony');
     });
+
+    test('Test 2.- Use the methid getInfo()', () => { 
+        
+        // I want to instantiate a Spiderman object with this information
+        const tomHolland = new Spiderman('Spiderman Marvel', 26, 'Tom Holland', 3, 'Marvel')
+
+        // With this line I check the function with the expected result
+        expect(tomHolland.getInfo()).toBe("Hey, I'm Tom Holland from Marvel studio");
+    });
+
 })
