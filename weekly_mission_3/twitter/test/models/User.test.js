@@ -20,4 +20,17 @@ describe('Unit Test for User class', () => {
 
     });
 
+    test('Test 2.- Add getters', () => {
+
+        // Create an User object
+        const user = new User(1, 'Lalo', 'Eduardo Solis', 'Bio')
+
+        // Validate the getters from User class
+        expect(user.getUsername).toBe('Lalo');
+        expect(user.getBio).toBe('Bio');
+        expect(user.getDateCreated).not.toBeUndefined();
+        expect(user.getLastUpdated).not.toBeUndefined();
+
+    });
+
 })
