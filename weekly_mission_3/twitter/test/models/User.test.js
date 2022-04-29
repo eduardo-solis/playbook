@@ -33,4 +33,17 @@ describe('Unit Test for User class', () => {
 
     });
 
+    test('Test 3.- Add setters', () => {
+
+        // Create an User object
+        const user = new User(1, 'Lalo', 'Eduardo Solis', 'Bio')
+
+        user.setUsername = 'LaloQuera'
+        expect(user.username).toBe('LaloQuera');
+
+        user.setBio = 'New bio'
+        expect(user.bio).toBe('New bio');
+
+    });
+
 })
