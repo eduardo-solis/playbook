@@ -6,7 +6,7 @@ describe('Unit Test for User class', () => {
     test('Test 1.- Create an User object', () => {
 
         // Create an User object
-        const user = new User(1, 'Lalo', 'Eduardo Solis', 'Bio', 'dateCreated', 'lastUpdate')
+        const user = new User(1, 'Lalo', 'Eduardo Solis', 'Bio', 'dateCreated', 'lastUpdated')
 
         // Validate the User object
         expect(user.id).toBe(1);
