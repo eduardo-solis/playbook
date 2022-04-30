@@ -28,6 +28,14 @@ class UserService {
         user.setUsername = username
     }
 
+    static getAllUsernames(users) {
+
+        let usernames = users.map( user => user.username )
+
+        return usernames
+
+    }
+
 }
 
 module.exports = UserService

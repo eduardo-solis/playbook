@@ -38,9 +38,9 @@ describe('Test for UserService', () => {
 
     test('Test 4.- Given a list of users give me the list of usernames', () => {
 
-        const user1 = UserService(1, 'Lalo1', 'Eduardo Solis')
-        const user2 = UserService(2, 'Lalo2', 'Eduardo Solis')
-        const user3 = UserService(3, 'Lalo3', 'Eduardo Solis')
+        const user1 = UserService.create(1, 'Lalo1', 'Eduardo Solis')
+        const user2 = UserService.create(2, 'Lalo2', 'Eduardo Solis')
+        const user3 = UserService.create(3, 'Lalo3', 'Eduardo Solis')
 
         const usernames = UserService.getAllUsernames([user1, user2, user3])
 
