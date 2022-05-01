@@ -1,4 +1,6 @@
 
+const UserService = require('./../services/UserService')
+
 class UserView {
 
     static createUser(payload){
@@ -15,6 +17,10 @@ class UserView {
 
         }
 
+        const user = UserService.create(payload.id, payload.username, payload.name)
+
+        return user
+        
     }
 
 }
